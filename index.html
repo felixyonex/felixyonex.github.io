@@ -28,21 +28,16 @@
   <!-- Add your site or application content here -->
   <!-- new nav bar -->
   <ul id="menu">
-	<li data-menuanchor="firstPage"><a href="#firstPage">Intro</a></li>
-	<li data-menuanchor="secondPage"><a href="#secondPage">Skillset</a></li>
-	<li data-menuanchor="3rdPage"><a href="#3rdPage">Works</a></li>
-	<li data-menuanchor="4thPage"><a href="#4thPage">About Me</a></li>
-  </ul>
+     <div class="icon">
 
-<!--     <nav class="main-navigation">
-        <a href=""></a>
-        <nav class="sub-navigation">
-            <a href="#firstPage">Intro</a>
-            <a href="#secondPage">Skillset</a>
-            <a href="#3rdPage">Works</a>
-            <a href="#4thPage">About Me</a>
-        </nav>
-    </nav> -->
+     </div>
+    <div class="sub-nav">
+        <li data-menuanchor="firstPage"><a href="#firstPage">Intro</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Skillset</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">Works</a></li>
+        <li data-menuanchor="4thPage"><a href="#4thPage">About Me</a></li>
+    </div>
+  </ul>
 
   <div id="fullpage">
     <div class="section firstPage">
@@ -63,7 +58,6 @@
                 </p>
             </div>
         </div>
-
     </div>
     <div class="section secondPage">
         <h1>Skillset</h1>
@@ -165,7 +159,7 @@
       navigation: true,
       resize: true,
       navigationPosition: 'right',
-      continuousVertical: true,
+      continuousVertical: false,
       afterLoad: function(anchorLink, index){
             console.log("AFTER LOAD - anchorLink:" +anchorLink + " index:" +index );
         },
