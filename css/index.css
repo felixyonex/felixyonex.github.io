@@ -23,27 +23,27 @@
   /*             border-left: 1px solid #eef3f0;
             border-right: 1px solid #eef3f0; */
 }
-#main {
+#fullpage {
   width: 100%;
 }
-#main h1,
-#main h2 {
+#fullpage h1,
+#fullpage h2 {
   cursor: default;
 }
-#main .firstPage {
+#fullpage .firstPage {
   width: 100%;
   position: relative;
 }
-#main .firstPage .content {
+#fullpage .firstPage .content {
   width: 100%;
   height: 100%;
 }
-#main .firstPage .content #avatarSpace {
+#fullpage .firstPage .content #avatarSpace {
   position: relative;
   width: 100%;
   top: 15%;
 }
-#main .firstPage .content #avatarSpace #avatar {
+#fullpage .firstPage .content #avatarSpace #avatar {
   position: relative;
   width: 250px;
   height: 250px;
@@ -57,28 +57,28 @@
   animation: zoomInOut 1s 0.2s forwards;
   transition: all 1s;
 }
-#main .firstPage .content #avatarSpace #avatar img {
+#fullpage .firstPage .content #avatarSpace #avatar img {
   width: 100%;
   height: 100%;
 }
-#main .firstPage .content #avatarSpace #avatar:hover {
+#fullpage .firstPage .content #avatarSpace #avatar:hover {
   box-shadow: 0 2px 20px 5px #aaa;
   transform: translateY(-5px);
 }
-#main .firstPage .content .intro {
+#fullpage .firstPage .content .intro {
   width: 60%;
   margin: 0 auto;
   position: relative;
   top: 20%;
 }
-#main .firstPage .content h1,
-#main .firstPage .content h2,
-#main .firstPage .content p {
+#fullpage .firstPage .content h1,
+#fullpage .firstPage .content h2,
+#fullpage .firstPage .content p {
   text-align: center;
   position: relative;
   margin: 20px auto;
 }
-#main .firstPage .content h1 {
+#fullpage .firstPage .content h1 {
   opacity: 0;
   transform: translateY(10px);
   top: 15%;
@@ -87,22 +87,22 @@
   color: #eef3f0;
   animation: zoomInOut 1s 0.8s forwards;
 }
-#main .firstPage .content h2 {
+#fullpage .firstPage .content h2 {
   top: 15%;
   color: #eef3f0;
   opacity: 0;
   transform: translateY(10px);
   animation: emersion 1s 1.5s forwards;
 }
-#main .firstPage .content h2 {
+#fullpage .firstPage .content h2 {
   font-family: Consolas;
   font-size: 2rem;
   color: #555;
 }
-#main .firstPage .content h2:nth-child(3) {
+#fullpage .firstPage .content h2:nth-child(3) {
   color: #eef3f0;
 }
-#main .firstPage .content p a {
+#fullpage .firstPage .content p a {
   text-decoration: none;
   cursor: pointer;
   top: 16%;
@@ -115,15 +115,15 @@
   transition: all 1s;
   animation: emersion 1.5s 2s forwards;
 }
-#main .firstPage .content p a:hover {
+#fullpage .firstPage .content p a:hover {
   transform: translateY(-2px);
   color: #a6ff17;
 }
-#main .secondPage {
+#fullpage .secondPage {
   width: 100%;
   position: relative;
 }
-#main .secondPage h1 {
+#fullpage .secondPage h1 {
   font-size: 3.5rem;
   text-align: center;
   position: relative;
@@ -131,13 +131,13 @@
   text-shadow: 1px 2px #4bbfc3, 2px 4px #63dadf;
   color: #eef3f0;
 }
-#main .secondPage div.row {
+#fullpage .secondPage div.row {
   position: relative;
   top: -10%;
   width: 60%;
   margin: 0 auto;
 }
-#main .secondPage .leftCol div {
+#fullpage .secondPage .leftCol div {
   position: relative;
   display: inline-block;
   margin: 5px 10px;
@@ -146,11 +146,11 @@
   padding: 0;
   transition: all 0.3s;
 }
-#main .secondPage .leftCol div:hover {
+#fullpage .secondPage .leftCol div:hover {
   box-shadow: 3px 3px 6px #333;
   transform: translateX(-3px) translateY(-3px);
 }
-#main .secondPage .leftCol p {
+#fullpage .secondPage .leftCol p {
   cursor: pointer;
   width: 100%;
   margin: 0;
@@ -160,12 +160,12 @@
   color: #eef3f0;
   font-family: Consolas;
 }
-#main .thirdPage {
+#fullpage .thirdPage {
   width: 100%;
   position: relative;
   height: 100%;
 }
-#main .thirdPage h1 {
+#fullpage .thirdPage h1 {
   position: relative;
   font-size: 3.5rem;
   text-align: center;
@@ -173,63 +173,63 @@
   text-shadow: 1px 2px #7baabe, 2px 4px #85d7fa;
   color: #eef3f0;
 }
-#main .thirdPage .content {
+#fullpage .thirdPage .content {
   position: relative;
   width: 100%;
   height: 60%;
   margin: 0 auto;
   top: -5%;
 }
-#main .thirdPage .content .row {
+#fullpage .thirdPage .content .row {
   padding: 10px;
   margin: 15px auto;
   width: 90%;
   height: 100%;
   position: relative;
 }
-#main .thirdPage .content .row .frame {
+#fullpage .thirdPage .content .row .frame {
   width: 100%;
   height: 80%;
   margin: 15px 15px;
   border: 1px solid #eef3f0;
   transition: all 0.5s;
 }
-#main .thirdPage .content .row .frame .img {
+#fullpage .thirdPage .content .row .frame .img {
   width: 60%;
   height: 60%;
   margin: 20px auto;
 }
-#main .thirdPage .content .row .frame .img .icon {
+#fullpage .thirdPage .content .row .frame .img .icon {
   cursor: pointer;
   width: 100%;
 }
-#main .thirdPage .content .row .frame .img .icon path {
+#fullpage .thirdPage .content .row .frame .img .icon path {
   fill: #eef3f0;
 }
-#main .thirdPage .content .row .frame .text {
+#fullpage .thirdPage .content .row .frame .text {
   color: #eef3f0;
   vertical-align: middle;
 }
-#main .thirdPage .content .row .frame .text h2 {
+#fullpage .thirdPage .content .row .frame .text h2 {
   font-size: 2rem;
   font-family: Consolas;
   text-align: center;
 }
-#main .thirdPage .content .row .frame .text p {
+#fullpage .thirdPage .content .row .frame .text p {
   margin: 10px 10px;
   font-size: 1.2rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#main .thirdPage .content .row .frame:hover {
+#fullpage .thirdPage .content .row .frame:hover {
   box-shadow: 0px 5px 10px -2px #666666;
   border: 1px solid #2e8ab4;
   background-color: #2e8ab4;
   transform: translateY(-5px);
 }
-#main .fourthPage {
+#fullpage .fourthPage {
   position: relative;
 }
-#main .fourthPage h1 {
+#fullpage .fourthPage h1 {
   font-size: 3.5rem;
   text-align: center;
   position: relative;
@@ -237,15 +237,16 @@
   text-shadow: 1px 2px #4ea9bb, 2px 4px #54cde6;
   color: #eef3f0;
 }
-#main .fourthPage .intro {
+#fullpage .fourthPage .intro {
   margin: 0 auto;
-  font-size: 1.3rem;
   position: relative;
   top: -10%;
+  width: 100%;
   font-family: 'Courier New', Courier, monospace;
   font-family: Consolas;
   width: 70%;
   color: #eef3f0;
+  font-size: 1.3rem;
 }
 @keyframes emersion {
   0% {

@@ -26,7 +26,14 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <nav class="main-navigation">
+  <ul id="menu">
+	<li data-menuanchor="firstPage"><a href="#firstPage">Intro</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Skillset</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">Works</a></li>
+	<li data-menuanchor="4thPage"><a href="#4thPage">About Me</a></li>
+  </ul>
+
+<!--     <nav class="main-navigation">
         <a href=""></a>
         <nav class="sub-navigation">
             <a href="#firstPage">Intro</a>
@@ -34,9 +41,9 @@
             <a href="#3rdPage">Works</a>
             <a href="#4thPage">About Me</a>
         </nav>
-    </nav>
-  <div id="main">
+    </nav> -->
 
+  <div id="fullpage">
     <div class="section firstPage">
         <div class="content">
             <div id="avatarSpace">
@@ -150,7 +157,7 @@
   </div>
   <script src="js/vendor/fullpage.min.js"></script>
   <script type="text/javascript">
-    var myFullpage = new fullpage('#main', {
+    var myFullpage = new fullpage('#fullpage', {
       sectionsColor: ['#22C3AA', '#4BBFC3', '#7BAABE', '#4ea9bb', 'whitesmoke'],
       anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],
       menu: '#menu',
