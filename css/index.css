@@ -9,8 +9,9 @@
   margin: 0;
 }
 #menu .sub-nav {
+  float: right;
   position: absolute;
-  right: 2%;
+  right: 5%;
 }
 #menu .sub-nav li {
   display: inline-block;
@@ -21,6 +22,11 @@
   color: #fff;
   font-size: 1rem;
   font-family: 'Courier New', Courier, monospace;
+}
+@media screen and (max-device-width: 413px) {
+  #menu .sub-nav li a {
+    font-size: 0.8rem;
+  }
 }
 #menu .sub-nav li:hover {
   transform: translateY(-1px);
@@ -38,8 +44,28 @@
 }
 #menu .sub-nav li a,
 #menu .sub-nav li.active a {
-  padding: 9px 18px;
+  padding: 0.5rem 1rem;
   display: block;
+}
+@media screen and (max-device-width: 480px) {
+  #menu .sub-nav {
+    float: none;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 780px) {
+  #menu .sub-nav {
+    float: none;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 #fullpage {
   width: 100%;
@@ -71,7 +97,6 @@
   background-color: #eee;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(10px) scale(0.8);
   animation: zoomInOut 1s 0.2s forwards;
   transition: all 1s;
 }
@@ -79,12 +104,8 @@
   width: 100%;
   height: 100%;
 }
-#fullpage .firstPage .content #avatarSpace #avatar:hover {
-  box-shadow: 0 2px 20px 5px #aaa;
-  transform: translateY(-5px);
-}
 #fullpage .firstPage .content .intro {
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
   position: relative;
   top: 20%;
@@ -106,16 +127,13 @@
   animation: zoomInOut 1s 0.8s forwards;
 }
 #fullpage .firstPage .content h2 {
+  font-family: 'Consolas', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  color: #555;
   top: 15%;
-  color: #eef3f0;
   opacity: 0;
   transform: translateY(10px);
   animation: emersion 1s 1.5s forwards;
-}
-#fullpage .firstPage .content h2 {
-  font-family: Consolas;
-  font-size: 2rem;
-  color: #555;
 }
 #fullpage .firstPage .content h2:nth-child(3) {
   color: #eef3f0;
@@ -124,7 +142,7 @@
   text-decoration: none;
   cursor: pointer;
   top: 16%;
-  font-family: Consolas, Courier, monospace;
+  font-family: 'Consolas', Courier, monospace;
   font-size: 1.5rem;
   font-weight: 500;
   color: #008a75;
@@ -137,6 +155,22 @@
   transform: translateY(-2px);
   color: #a6ff17;
 }
+@media screen and (max-device-width: 480px) {
+  #fullpage .firstPage .content #avatarSpace #avatar {
+    width: 40vw;
+    height: 40vw;
+    border: 2vw solid #fff;
+  }
+  #fullpage .firstPage .content .intro h1 {
+    font-size: 2.5rem;
+  }
+  #fullpage .firstPage .content .intro h2 {
+    font-size: 1.3rem;
+  }
+  #fullpage .firstPage .content .intro P a {
+    font-size: 1.2rem;
+  }
+}
 #fullpage .secondPage {
   width: 100%;
   position: relative;
@@ -145,7 +179,7 @@
   font-size: 3.5rem;
   text-align: center;
   position: relative;
-  top: -20%;
+  top: 10%;
   text-shadow: 1px 2px #4bbfc3, 2px 4px #63dadf;
   color: #eef3f0;
 }
@@ -153,7 +187,14 @@
   position: relative;
   top: -10%;
   width: 60%;
+  height: 100%;
   margin: 0 auto;
+}
+#fullpage .secondPage .leftCol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
 }
 #fullpage .secondPage .leftCol div {
   position: relative;
@@ -176,7 +217,23 @@
   text-align: center;
   font-size: 1.5rem;
   color: #eef3f0;
-  font-family: Consolas;
+  font-family: 'Consolas', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+@media screen and (max-device-width: 480px) {
+  #fullpage .secondPage div.row {
+    width: 80%;
+  }
+  #fullpage .secondPage h1 {
+    font-size: 3rem;
+  }
+  #fullpage .secondPage .leftCol div {
+    margin: 1vw, 2vw;
+    border-radius: 1vw;
+  }
+  #fullpage .secondPage .leftCol P {
+    font-size: 1.2rem;
+    padding-bottom: 2px;
+  }
 }
 #fullpage .thirdPage {
   width: 100%;
@@ -187,34 +244,38 @@
   position: relative;
   font-size: 3.5rem;
   text-align: center;
-  top: -10%;
+  top: 10%;
   text-shadow: 1px 2px #7baabe, 2px 4px #85d7fa;
   color: #eef3f0;
 }
 #fullpage .thirdPage .content {
   position: relative;
   width: 100%;
-  height: 60%;
   margin: 0 auto;
-  top: -5%;
+  top: 15%;
 }
 #fullpage .thirdPage .content .row {
   padding: 10px;
   margin: 15px auto;
   width: 90%;
-  height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 #fullpage .thirdPage .content .row .frame {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   width: 100%;
-  height: 80%;
-  margin: 15px 15px;
+  margin: 15px;
   border: 1px solid #eef3f0;
   transition: all 0.5s;
 }
 #fullpage .thirdPage .content .row .frame .img {
   width: 60%;
-  height: 60%;
   margin: 20px auto;
 }
 #fullpage .thirdPage .content .row .frame .img .icon {
@@ -226,23 +287,91 @@
 }
 #fullpage .thirdPage .content .row .frame .text {
   color: #eef3f0;
-  vertical-align: middle;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 #fullpage .thirdPage .content .row .frame .text h2 {
+  display: inline-block;
   font-size: 2rem;
   font-family: Consolas;
   text-align: center;
 }
 #fullpage .thirdPage .content .row .frame .text p {
-  margin: 10px 10px;
+  display: inline-block;
+  margin: 5px 10px 20px 15px;
   font-size: 1.2rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #fullpage .thirdPage .content .row .frame:hover {
   box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.4);
   border: 1px solid #2e8ab4;
   background-color: #2e8ab4;
   transform: translateY(-5px);
+}
+@media screen and (max-width: 1000px) {
+  #fullpage .thirdPage .content .row .frame .text h2 {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  #fullpage .thirdPage .content .row .frame .text h2 {
+    font-size: 1.5rem;
+  }
+  #fullpage .thirdPage .content .row .frame .text p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-device-width: 480px) {
+  #fullpage .thirdPage h1 {
+    font-size: 2.5rem;
+    top: 7%;
+  }
+  #fullpage .thirdPage .content {
+    height: 100%;
+    top: 5%;
+  }
+  #fullpage .thirdPage .content .row {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  #fullpage .thirdPage .content .row .frame {
+    position: relative;
+    margin: 3vw 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #fullpage .thirdPage .content .row .frame .img {
+    width: 20vw;
+    margin: 2vw;
+  }
+  #fullpage .thirdPage .content .row .frame .img img {
+    width: 20vw;
+  }
+  #fullpage .thirdPage .content .row .frame .text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #fullpage .thirdPage .content .row .frame .text h2 {
+    margin-top: 1vw;
+    font-size: 1.2rem;
+  }
+  #fullpage .thirdPage .content .row .frame .text p {
+    margin-top: -1vw;
+    font-size: 0.8rem;
+  }
 }
 #fullpage .fourthPage {
   position: relative;
@@ -251,20 +380,43 @@
   font-size: 3.5rem;
   text-align: center;
   position: relative;
-  top: -10%;
+  top: 10%;
   text-shadow: 1px 2px #4ea9bb, 2px 4px #54cde6;
   color: #eef3f0;
 }
 #fullpage .fourthPage .intro {
   margin: 0 auto;
   position: relative;
-  top: -10%;
-  width: 100%;
-  font-family: 'Courier New', Courier, monospace;
-  font-family: Consolas;
+  top: 10%;
   width: 70%;
+}
+#fullpage .fourthPage .intro P {
+  font-family: 'Consolas', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #eef3f0;
   font-size: 1.3rem;
+}
+@media screen and (max-width: 1300px) {
+  #fullpage .fourthPage .intro {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  #fullpage .fourthPage .intro p {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+@media screen and (max-width: 750px) {
+  #fullpage .fourthPage .intro p {
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+@media screen and (max-device-width: 480px) {
+  #fullpage .fourthPage .intro p {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 }
 @keyframes emersion {
   0% {
