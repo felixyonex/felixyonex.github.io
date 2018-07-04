@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/smallScreen.css">
 
 </head>
 
@@ -30,10 +29,7 @@
     <!-- new nav bar -->
 
     <ul id="menu">
-<!--         <div class="icon">
-            FELIX Portfolio
-        </div> -->
-        <div class="sub-nav clearfix">
+        <div class="sub-nav .clearfix">
             <li data-menuanchor="firstPage">
                 <a href="#firstPage">Intro</a>
             </li>
@@ -118,7 +114,6 @@
             <h1>Works</h1>
             <div class="content">
                 <div class="row">
- 
                         <div class="frame">
                             <div class="img">
                                 <img class="svg icon" src="img/Speach-BubbleDialog.svg" alt="Sayings">
@@ -128,10 +123,7 @@
                                 <p>A message board website built with NodeJS, MongoDB and Boostrap</p>
                             </div>
                         </div>
-
-
                         <div class="frame">
-
                             <div class="img">
                                 <img class="svg icon" src="img/mobile (2).svg" alt="One monment">
                             </div>
@@ -140,10 +132,7 @@
                                 <p>A single page web app built with AngularJS</p>
                             </div>
                         </div>
-
-
                         <div class="frame">
-
                             <div class="img">
                                 <img class="svg icon" src="img/finance (2).svg" alt="Mobile Finace">
                             </div>
@@ -195,14 +184,15 @@
     <script src="js/vendor/fullpage.min.js"></script>
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
-            sectionsColor: ['#22C3AA', '#4BBFC3', '#7BAABE', '#4ea9bb', 'whitesmoke'],
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', 'lastPage'],
+            sectionsColor: ['#22C3AA', '#4BBFC3', '#7BAABE', '#4ea9bb'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
             menu: '#menu',
             navigation: true,
             resize: true,
             verticalCentered: false,
             navigationPosition: 'right',
-            continuousVertical: false,
+            // autoScrolling: false,
+            continuousVertical: true,
             afterLoad: function (anchorLink, index) {
                 console.log("AFTER LOAD - anchorLink:" + anchorLink + " index:" + index);
             },
@@ -270,28 +260,25 @@
     //The frame is a flex box 
     //set their height the same as the that of the heightest one
 
-    window.onload = function () {
-        (
-            function () {
+        (function () {
                 if (document.documentElement.clientWidth>480) {
                     var frames = $(".frame");
-                    console.log(frames[0].scrollHeight);
                     var frameHeighArr = [];
 
                     for (var i = 0, len = frames.length; i< len; i ++) {
                         frameHeighArr.push(frames[i].scrollHeight);
                     }
 
-                    console.log(frameHeighArr);
                     var maxHeight = Math.max(...frameHeighArr);
-                    console.log(maxHeight);
                     for (var i = 0, len = frames.length; i< len; i ++) {
                         frames[i].style.height = maxHeight + "px";
                     }
+                }else {
+                    return
                 }
             }
         )();    
-    }
+
 
     
 
