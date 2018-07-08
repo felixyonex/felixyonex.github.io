@@ -103,6 +103,7 @@ textarea {
 }
 
     .clearfix {
+        clear: both;
         display: block;
         zoom: 1;
     }

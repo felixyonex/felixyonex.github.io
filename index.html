@@ -114,44 +114,52 @@
             <h1>Works</h1>
             <div class="content">
                 <div class="row">
-                        <div class="frame">
-                            <div class="img">
-                                <img class="svg icon" src="img/Speach-BubbleDialog.svg" alt="Sayings">
+                    <div class="frame">
+                        <a href="https://github.com/felixyonex/sayings">
+                            <div class="flip-container">
+                                <div class="flipper"></div>
                             </div>
-                            <div class="text">
-                                <h2>Sayings</h2>
-                                <p>A message board website built with NodeJS, MongoDB and Boostrap</p>
-                            </div>
+                        </a>
+                        <div class="text">
+                            <h2>Sayings</h2>
+                            <p>A message board website built with NodeJS, MongoDB and Boostrap</p>
                         </div>
-                        <div class="frame">
-                            <div class="img">
-                                <img class="svg icon" src="img/mobile (2).svg" alt="One monment">
+                    </div>
+                    <div class="frame">
+                        <a href="#">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                </div>
                             </div>
-                            <div class="text">
-                                <h2>One Moment</h2>
-                                <p>A single page web app built with AngularJS</p>
-                            </div>
+                        </a>
+                        <div class="text">
+                            <h2>One Moment</h2>
+                            <p>A single page web app built with AngularJS</p>
                         </div>
-                        <div class="frame">
-                            <div class="img">
-                                <img class="svg icon" src="img/finance (2).svg" alt="Mobile Finace">
+                    </div>
+                    <div class="frame">
+                        <a href="#">
+                            <div class="flip-container">
+                                <div class="flipper"></div>
                             </div>
-                            <div class="text">
-                                <h2>Mobile Finance</h2>
-                                <p>A responsive website for both desktop and mobile device</p>
-                            </div>
+                        </a>
+                        <div class="text">
+                            <h2>Mobile Finance</h2>
+                            <p>A responsive website for both desktop and mobile device</p>
                         </div>
-
-                        <div class="frame">
-
-                            <div class="img">
-                                <img class="svg icon" src="img/code library.svg" alt="jToolMin">
+                    </div>
+                    <div class="frame">
+                        <a href="https://github.com/felixyonex/jTool">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                </div>
                             </div>
-                            <div class="text">
-                                <h2>jTool</h2>
-                                <p>A lightweight JavaScript package which can realize the basic function of JQuery</p>
-                            </div>
+                        </a>
+                        <div class="text">
+                            <h2>jTool</h2>
+                            <p>A lightweight JavaScript encapsulated tool which can realize the similar function of JQuery</p>
                         </div>
+                    </div>
 
                 </div>
             </div>
@@ -160,20 +168,21 @@
             <h1>About Me</h1>
             <div class="intro">
                 <div class="text">
-                        <p>Greetings!</p>
-                        <p>Once I was a chemical engineer in SINOPEC. I had a master degree in chemical engineering and a bachelor degree
-                            in applied chemistry.</p>
-                        <p>Driven by interest towards information technology and design, I began to learn HTML, CSS and JavaScript.
-                            Thanks to the open sources community, I’ve been able to continuously learn new techniques in web development. Years
-                            of experience in academic research gives me the capacity of quick learning and critical thinking.</p>
-                        <p>During the process, I found myself increasingly fascinated in this field. Why not choose a career that I
-                            truly love? So, I decided to take a leap of faith.</p>
-                        <p>I finished my study of front-end technology systematically in IT Cast Education and Baidu Institute of Front-End
-                            Technology. I gained valuable experience in web development from projects finished on my own and in collaboration
-                            with others developers. I plan to dig in front-end tech and expand my skillset to back-end and UI-design
-                            as well.</p>
-                        <p>Currently I’m building an academic search website designed for the undergraduate students.</p>
-                        <p>If you are looking for a front-end developer, feel free to contact me!</p>
+                    <p>Greetings!</p>
+                    <p>Once I was a chemical engineer in SINOPEC. I had a master degree in chemical engineering and a bachelor
+                        degree in applied chemistry.</p>
+                    <p>Driven by interest towards information technology and design, I began to learn HTML, CSS and JavaScript.
+                        Thanks to the open sources community, I’ve been able to continuously learn new techniques in web
+                        development. Years of experience in academic research gives me the capacity of quick learning and
+                        critical thinking.</p>
+                    <p>During the process, I found myself increasingly fascinated in this field. Why not choose a career that
+                        I truly love? So, I decided to take a leap of faith.</p>
+                    <p>I finished my study of front-end technology systematically in IT Cast Education and Baidu Institute of
+                        Front-End Technology. I gained valuable experience in web development from projects finished on my
+                        own and in collaboration with others developers. I plan to dig in front-end tech and expand my skillset
+                        to back-end and UI-design as well.</p>
+                    <p>Currently I’m building an academic search website designed for the undergraduate students.</p>
+                    <p>If you are looking for a front-end developer, feel free to contact me!</p>
                 </div>
             </div>
             <div class="row">
@@ -183,8 +192,9 @@
     </div>
     <script src="js/vendor/fullpage.min.js"></script>
     <script type="text/javascript">
+        //fullpage config
         var myFullpage = new fullpage('#fullpage', {
-            sectionsColor: ['#22C3AA', '#4BBFC3', '#7BAABE', '#4ea9bb'],
+            sectionsColor: ['#22C3AA', '#4BBFC3', '#46A4D8', '#4EA9BB'],
             anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
             menu: '#menu',
             navigation: true,
@@ -256,31 +266,31 @@
     </script>
 
     <script>
-    //3thPage works
-    //The frame is a flex box 
-    //set their height the same as the that of the heightest one
+        //3thPage works
+        //The frame is a flex box 
+        //set their height the same as the that of the heightest one
 
         (function () {
-                if (document.documentElement.clientWidth>480) {
-                    var frames = $(".frame");
-                    var frameHeighArr = [];
+            if (document.documentElement.clientWidth > 480) {
+                var frames = $(".frame");
+                var frameHeighArr = [];
 
-                    for (var i = 0, len = frames.length; i< len; i ++) {
-                        frameHeighArr.push(frames[i].scrollHeight);
-                    }
-
-                    var maxHeight = Math.max(...frameHeighArr);
-                    for (var i = 0, len = frames.length; i< len; i ++) {
-                        frames[i].style.height = maxHeight + "px";
-                    }
-                }else {
-                    return
+                for (var i = 0, len = frames.length; i < len; i++) {
+                    frameHeighArr.push(frames[i].scrollHeight);
                 }
+
+                var maxHeight = Math.max(...frameHeighArr);
+                for (var i = 0, len = frames.length; i < len; i++) {
+                    frames[i].style.height = maxHeight + "px";
+                }
+            } else {
+                return
             }
-        )();    
+        }
+        )();
 
 
-    
+
 
     </script>
 

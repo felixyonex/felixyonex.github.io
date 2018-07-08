@@ -33,7 +33,7 @@ h1 {
 }
 #menu .sub-nav li:hover {
   transform: translateY(-1px);
-  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.3);
 }
 #menu .sub-nav li.active {
   border-bottom: 2px solid rgba(255, 255, 255, 0.7);
@@ -242,14 +242,13 @@ h1 {
 #fullpage .thirdPage {
   width: 100%;
   position: relative;
-  height: 100%;
 }
 #fullpage .thirdPage h1 {
   position: relative;
   font-size: 3.5rem;
   text-align: center;
   top: 10%;
-  text-shadow: 1px 2px #7baabe, 2px 4px #85d7fa;
+  text-shadow: 1px 2px #46a4d8, 2px 4px #85d7fa;
   color: #eef3f0;
 }
 #fullpage .thirdPage .content {
@@ -260,7 +259,7 @@ h1 {
 }
 #fullpage .thirdPage .content .row {
   padding: 10px;
-  margin: 15px auto;
+  margin: 1vw auto;
   width: 90%;
   position: relative;
   display: flex;
@@ -274,21 +273,58 @@ h1 {
   flex-wrap: nowrap;
   justify-content: flex-start;
   width: 100%;
-  margin: 15px;
+  margin: 1.2vw;
+  background-color: rgba(68, 155, 202, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 1vw;
+  box-shadow: 0px 2px 12px -2px rgba(240, 240, 240, 0.7);
   transition: all 0.5s;
 }
-#fullpage .thirdPage .content .row .frame .img {
-  width: 60%;
-  margin: 20px auto;
+#fullpage .thirdPage .content .row .frame .flip-container {
+  perspective: 1000px;
+  margin: 1vw auto;
+  position: relative;
 }
-#fullpage .thirdPage .content .row .frame .img .icon {
+#fullpage .thirdPage .content .row .frame .flip-container .flipper {
+  width: 10vw;
+  height: 10vw;
+  position: relative;
+  background-size: contain;
+  margin: 0 auto;
+}
+#fullpage .thirdPage .content .row .frame .flip-container .flipper::after,
+#fullpage .thirdPage .content .row .frame .flip-container .flipper::before {
+  content: "";
+  position: absolute;
   cursor: pointer;
   width: 100%;
+  height: 100%;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  transition: all 0.6s;
+  backface-visibility: hidden;
 }
-#fullpage .thirdPage .content .row .frame .img .icon path {
-  fill: #eef3f0;
+#fullpage .thirdPage .content .row .frame .flip-container .flipper::before {
+  transform: rotateY(-180deg);
+  background: url("../img/github-fill.svg");
+}
+#fullpage .thirdPage .content .row .frame .flip-container .flipper:hover::after {
+  transform: rotateY(180deg);
+}
+#fullpage .thirdPage .content .row .frame .flip-container .flipper:hover::before {
+  transform: rotateY(0deg);
+}
+#fullpage .thirdPage .content .row .frame:nth-child(1) .flipper::after {
+  background: url("../img/Speach-BubbleDialog.svg");
+}
+#fullpage .thirdPage .content .row .frame:nth-child(2) .flipper::after {
+  background: url("../img/mobile.svg");
+}
+#fullpage .thirdPage .content .row .frame:nth-child(3) .flipper::after {
+  background: url("../img/finance_\ form_icon_1.svg");
+}
+#fullpage .thirdPage .content .row .frame:nth-child(4) .flipper::after {
+  background: url("../img/code-library.svg");
 }
 #fullpage .thirdPage .content .row .frame .text {
   color: #eef3f0;
@@ -309,12 +345,12 @@ h1 {
   display: inline-block;
   margin: 5px 10px 20px 15px;
   font-size: 1.2rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Courier, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #fullpage .thirdPage .content .row .frame:hover {
-  box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.4);
-  border: 1px solid #2e8ab4;
-  background-color: #2e8ab4;
+  box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(18, 121, 177, 0.7);
+  background-color: rgba(18, 121, 177, 0.7);
   transform: translateY(-5px);
 }
 @media screen and (max-width: 1000px) {
