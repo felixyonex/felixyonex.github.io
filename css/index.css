@@ -96,8 +96,9 @@ h1 {
   height: 250px;
   margin: 0 auto;
   border-radius: 50%;
-  border: 10px solid #fff;
-  background-color: #eee;
+  border: 10px solid #eee;
+  background: url("../img/avatar.jpg") no-repeat center;
+  background-size: contain;
   overflow: hidden;
   opacity: 0;
   animation: zoomInOut 1s 0.2s forwards;
@@ -158,11 +159,71 @@ h1 {
   transform: translateY(-2px);
   color: #a6ff17;
 }
+#fullpage .firstPage .content ul {
+  width: 30%;
+  min-width: 300px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: emersion 0.5s 2.8s forwards;
+}
+#fullpage .firstPage .content ul li {
+  display: inline-block;
+  width: 33.33%;
+  margin: 5px 1vw;
+  font-size: 0;
+}
+#fullpage .firstPage .content ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition-property: color, transform;
+  transition-duration: 0.3s;
+}
+#fullpage .firstPage .content ul li a .icon {
+  cursor: pointer;
+  width: 100%;
+}
+#fullpage .firstPage .content ul li a::after {
+  position: absolute;
+  bottom: -28px;
+  left: -10px;
+}
+#fullpage .firstPage .content ul li a:hover {
+  text-decoration: none;
+  color: #008a75;
+  transform: translateY(-3px);
+}
+#fullpage .firstPage .content ul li a .icon:hover path {
+  fill: #008a75;
+}
+#fullpage .firstPage .content ul li:nth-child(1) a::after {
+  content: "GitHub";
+}
+#fullpage .firstPage .content ul li:nth-child(2) a::after {
+  content: "LinkedIn";
+}
+#fullpage .firstPage .content ul li:nth-child(3) a::after {
+  content: "Resume";
+}
 @media screen and (max-device-width: 480px) {
   #fullpage .firstPage .content #avatarSpace #avatar {
     width: 40vw;
     height: 40vw;
     border: 2vw solid #fff;
+    top: 10%;
+  }
+  #fullpage .firstPage .content .intro {
+    top: 15%;
   }
   #fullpage .firstPage .content .intro h1 {
     font-size: 2.5rem;
@@ -172,6 +233,19 @@ h1 {
   }
   #fullpage .firstPage .content .intro P a {
     font-size: 1.2rem;
+  }
+  #fullpage .firstPage .content .intro ul {
+    margin-top: -25%;
+  }
+  #fullpage .firstPage .content .intro ul li {
+    top: 10%;
+  }
+  #fullpage .firstPage .content .intro ul li a {
+    width: 20px;
+    height: 20px;
+  }
+  #fullpage .firstPage .content .intro ul li a::after {
+    display: none;
   }
 }
 #fullpage .secondPage {
@@ -338,7 +412,7 @@ h1 {
 #fullpage .thirdPage .content .row .frame .text h2 {
   display: inline-block;
   font-size: 2rem;
-  font-family: Consolas;
+  font-family: Consolas, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
 }
 #fullpage .thirdPage .content .row .frame .text p {
@@ -391,12 +465,15 @@ h1 {
     justify-content: flex-start;
     align-items: center;
   }
-  #fullpage .thirdPage .content .row .frame .img {
-    width: 20vw;
-    margin: 2vw;
+  #fullpage .thirdPage .content .row .frame .flip-container {
+    width: 15vw;
+    margin: 1vw;
   }
-  #fullpage .thirdPage .content .row .frame .img img {
+  #fullpage .thirdPage .content .row .frame .flip-container img {
     width: 20vw;
+  }
+  #fullpage .thirdPage .content .row .frame .flip-container .flipper::before {
+    visibility: hidden;
   }
   #fullpage .thirdPage .content .row .frame .text {
     display: flex;
@@ -410,8 +487,12 @@ h1 {
     font-size: 1.2rem;
   }
   #fullpage .thirdPage .content .row .frame .text p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: -1vw;
     font-size: 0.8rem;
+  }
+  #fullpage .thirdPage .content .row .frame:nth-child(3) {
+    display: none;
   }
 }
 #fullpage .fourthPage {
@@ -432,7 +513,7 @@ h1 {
   width: 70%;
 }
 #fullpage .fourthPage .intro P {
-  font-family: 'Consolas', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #eef3f0;
   font-size: 1.3rem;
 }
