@@ -1,3 +1,5 @@
+@font-face:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 h1 {
     margin-top: 0;
 }
@@ -130,7 +132,7 @@ h1 {
                 animation: zoomInOut 1s 0.8s forwards;
             }
             h2 {
-                font-family: 'Consolas', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-family: 'Consolas', @font-face;
                 font-size: 2rem;
                 color: #555;
                 top: 15%;
@@ -190,6 +192,7 @@ h1 {
                         .icon {
                             cursor: pointer;
                             width: 100%;
+                            height: 100%;
                         }
                         &::after {
                             position: absolute;
@@ -226,6 +229,9 @@ h1 {
                 }
             }
             @media screen and (max-device-width:480px) {
+                .content {
+                    width: 100%;
+                }
                 #avatarSpace #avatar {
                     width: 40vw;
                     height: 40vw;
@@ -246,15 +252,12 @@ h1 {
                         }
                     }
                     ul {
-                        margin-top: -25%;
+                        padding: 0 20% ;
                         li {
-                            top: 10%;
                             a {
                                 width: 20px;
                                 height: 20px;
-                                img {
-                                    // display: none;
-                                }
+
                                 &::after {
                                     display: none;
                                 }
@@ -277,56 +280,78 @@ h1 {
             text-shadow: 1px 2px #4bbfc3, 2px 4px #63dadf;
             color: #eef3f0;
         }
-        div.row {
+            .content {
             position: relative;
-            top: -10%;
+            top: 10%;
             width: 60%;
-            height: 100%;
+            height: 80%;
             margin: 0 auto;
-        }
-        .leftCol {
+            padding: 3vw 0;
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-content: center;
-            div {
-                position: relative;
-                display: inline-block;
-                margin: 5px 10px;
-                background-color: rgba(76, 76, 76, 0.6);
-                border-radius: 5px;
-                padding: 0;
-                transition: all 0.3s;
-            }
-            div:hover {
-                box-shadow: 3px 3px 6px #333;
-                transform: translateX(-3px) translateY(-3px);
-            }
-            p {
-                cursor: pointer;
-                width: 100%;
-                margin: 0;
-                padding: 0px 10px;
-                text-align: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            .intro{
+                // margin: 1vw auto;
+                padding: 10px;
+                font-family: @font-face;
                 font-size: 1.5rem;
-                color: #eef3f0;
-                font-family: 'Consolas', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: #e1feff;
+                P{
+                    cursor: default;
+                    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3)
+                }
+            }
+            .skills {
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: center;
+                div {
+                    position: relative;
+                    display: inline-block;
+                    margin: 5px 10px;
+                    background-color: rgba(76, 76, 76, 0.6);
+                    border-radius: 5px;
+                    padding: 0;
+                    transition: all 0.3s;
+                }
+                div:hover {
+                    box-shadow: 3px 3px 6px #333;
+                    transform: translateX(-3px) translateY(-3px);
+                }
+                p {
+                    cursor: pointer;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0px 10px;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    color: #eef3f0;
+                    font-family: 'Consolas', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
             }
         }
+
         @media screen and (max-device-width:480px) {
-            div.row {
+            div.content {
                 width: 80%;
             }
             h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
-            .leftCol div {
-                margin: 1vw, 2vw;
+            .intro {
+                display: none;
+            }
+            div.skills div {
+                margin: 1vw, 1vw;
                 border-radius: 1vw;
-            }
-            .leftCol P {
-                font-size: 1.2rem;
-                padding-bottom: 2px;
+                p {
+                    font-size: 1rem;
+                    padding-bottom: 2px;
+                }
             }
         }
     }
@@ -362,10 +387,10 @@ h1 {
                     justify-content: flex-start;
                     width: 100%;
                     margin: 1.2vw;
-                    background-color: rgba(68, 155, 202, 0.5);
-                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    background-color: #46a4d8;
+                    border: 1px solid #46a4d8;
                     border-radius: 1vw;
-                    box-shadow: 0px 2px 12px -2px rgba(240, 240, 240, 0.7);
+                    box-shadow: 0px 2px 12px 1px rgba(240, 240, 240, 0.6);
                     transition: all 0.5s;
                     .flip-container {
                         perspective: 1000px;
@@ -467,7 +492,7 @@ h1 {
         @media screen and (max-device-width:480px) {
             h1 {
                 font-size: 2.5rem;
-                top: 7%;
+                top: 10%;
             }
             .content {
                 height: 100%;
@@ -539,8 +564,9 @@ h1 {
             top: 10%; // font-weight: 500;
             width: 70%;
             P {
-                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-family: @font-face;
                 color: #eef3f0;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
                 font-size: 1.3rem;
             }
         }
