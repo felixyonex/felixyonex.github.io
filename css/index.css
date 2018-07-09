@@ -24,7 +24,7 @@ h1 {
   text-decoration: none;
   color: #fff;
   font-size: 1rem;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 @media screen and (max-device-width: 413px) {
   #menu .sub-nav li a {
@@ -97,7 +97,7 @@ h1 {
   margin: 0 auto;
   border-radius: 50%;
   border: 10px solid #eee;
-  background: url("../img/avatar.jpg") no-repeat center;
+  background: url("../img/avatarMin.jpg") no-repeat center;
   background-size: contain;
   overflow: hidden;
   opacity: 0;
@@ -137,7 +137,7 @@ h1 {
   top: 15%;
   opacity: 0;
   transform: translateY(10px);
-  animation: emersion 1s 1.5s forwards;
+  animation: emersion 1s 1.4s forwards;
 }
 #fullpage .firstPage .content h2:nth-child(3) {
   color: #eef3f0;
@@ -209,12 +209,15 @@ h1 {
 }
 #fullpage .firstPage .content ul li:nth-child(1) a::after {
   content: "GitHub";
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #fullpage .firstPage .content ul li:nth-child(2) a::after {
   content: "LinkedIn";
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #fullpage .firstPage .content ul li:nth-child(3) a::after {
   content: "Resume";
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 @media screen and (max-device-width: 480px) {
   #fullpage .firstPage .content .content {
@@ -239,7 +242,7 @@ h1 {
     font-size: 1.2rem;
   }
   #fullpage .firstPage .content .intro ul {
-    padding: 0 20% ;
+    padding: 0 20%;
   }
   #fullpage .firstPage .content .intro ul li a {
     width: 20px;
@@ -283,7 +286,6 @@ h1 {
 }
 #fullpage .secondPage .content .intro P {
   cursor: default;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 #fullpage .secondPage .content .skills {
   display: flex;
@@ -315,20 +317,23 @@ h1 {
   font-family: 'Consolas', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 @media screen and (max-device-width: 480px) {
-  #fullpage .secondPage div.content {
-    width: 80%;
-  }
   #fullpage .secondPage h1 {
     font-size: 2.5rem;
   }
-  #fullpage .secondPage .intro {
+  #fullpage .secondPage div.content {
+    width: 80%;
+  }
+  #fullpage .secondPage div.content .intro p {
+    font-size: 1rem;
+  }
+  #fullpage .secondPage div.content .intro p:nth-child(2) {
     display: none;
   }
-  #fullpage .secondPage div.skills div {
+  #fullpage .secondPage div.content div.skills div {
     margin: 1vw, 1vw;
     border-radius: 1vw;
   }
-  #fullpage .secondPage div.skills div p {
+  #fullpage .secondPage div.content div.skills div p {
     font-size: 1rem;
     padding-bottom: 2px;
   }
@@ -377,11 +382,12 @@ h1 {
 #fullpage .thirdPage .content .row .frame .flip-container {
   perspective: 1000px;
   margin: 1vw auto;
+  padding-top: 0.5vw;
   position: relative;
 }
 #fullpage .thirdPage .content .row .frame .flip-container .flipper {
-  width: 10vw;
-  height: 10vw;
+  width: 8vw;
+  height: 8vw;
   position: relative;
   background-size: contain;
   margin: 0 auto;
@@ -409,7 +415,7 @@ h1 {
   transform: rotateY(0deg);
 }
 #fullpage .thirdPage .content .row .frame:nth-child(1) .flipper::after {
-  background: url("../img/Speach-BubbleDialog.svg");
+  background: url("../img/chat-01.svg");
 }
 #fullpage .thirdPage .content .row .frame:nth-child(2) .flipper::after {
   background: url("../img/mobile.svg");
@@ -432,14 +438,15 @@ h1 {
 #fullpage .thirdPage .content .row .frame .text h2 {
   display: inline-block;
   font-size: 2rem;
-  font-family: Consolas, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
+  font-weight: 300;
 }
 #fullpage .thirdPage .content .row .frame .text p {
   display: inline-block;
   margin: 5px 10px 20px 15px;
   font-size: 1.2rem;
-  font-family: Courier, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Microsoft Yahei", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #fullpage .thirdPage .content .row .frame:hover {
   box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.6);
@@ -458,6 +465,17 @@ h1 {
   }
   #fullpage .thirdPage .content .row .frame .text p {
     font-size: 1.1rem;
+  }
+}
+@media screen and (max-device-width: 1366px) {
+  #fullpage .thirdPage .content .row .frame .flip-container .flipper::before {
+    visibility: hidden;
+  }
+  #fullpage .thirdPage .content .row .frame .text h2 {
+    font-size: 1.3rem;
+  }
+  #fullpage .thirdPage .content .row .frame .text P {
+    font-size: 1rem;
   }
 }
 @media screen and (max-device-width: 480px) {
@@ -529,14 +547,47 @@ h1 {
 #fullpage .fourthPage .intro {
   margin: 0 auto;
   position: relative;
-  top: 10%;
+  top: 15%;
   width: 70%;
 }
 #fullpage .fourthPage .intro P {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #eef3f0;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  font-size: 1.3rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+#fullpage .fourthPage .intro P a {
+  display: inline-block;
+  text-shadow: 1px 1px 1px #54a6b6;
+  transition: all 0.3s;
+}
+#fullpage .fourthPage .intro P a:hover {
+  color: #a6ff17;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+#fullpage .fourthPage .intro P .email {
+  display: inline-block;
+  margin-left: 8px;
+}
+#fullpage .fourthPage .intro P .email .icon {
+  width: 1em;
+  height: 1em;
+  transform: translateY(-2px);
+  transition: all 0.3s;
+}
+#fullpage .fourthPage .intro P .email .icon path {
+  fill: #00705f;
+  transition: all 0.3s;
+}
+#fullpage .fourthPage .intro P .email .icon:hover {
+  transform: translateY(-3px);
+}
+#fullpage .fourthPage .intro P .email .icon:hover path {
+  fill: #a6ff17;
+}
+#fullpage .fourthPage .intro .hiddenP {
+  display: none;
 }
 @media screen and (max-width: 1300px) {
   #fullpage .fourthPage .intro {
@@ -558,10 +609,36 @@ h1 {
 @media screen and (max-device-width: 480px) {
   #fullpage .fourthPage h1 {
     font-size: 2.5rem;
+    top: 8%;
+  }
+  #fullpage .fourthPage .intro {
+    top: 6%;
   }
   #fullpage .fourthPage .intro p {
-    font-size: 0.8rem;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 1vw auto;
+    font-size: 1rem;
+  }
+  #fullpage .fourthPage .intro .firstP:nth-child(3)::after {
+    content: "";
+    width: 10%;
+    height: 8vw;
+    position: absolute;
+    left: 45%;
+    bottom: -8vw;
+    background-image: url("../img/down.svg");
+    background-size: contain;
+    transition: transform 0.3s;
+  }
+  #fullpage .fourthPage .intro .firstP:nth-child(3):hover::after {
+    transform: translateY(5px) scale(0.8);
+  }
+  #fullpage .fourthPage .intro .secondP {
+    display: none;
+  }
+  .svg#fullpage .fourthPage .intro.icon {
+    width: 10px;
+    height: 10px;
+    transform: translateY(0);
   }
 }
 @keyframes emersion {

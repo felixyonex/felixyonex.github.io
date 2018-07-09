@@ -34,7 +34,7 @@
                 <a href="#firstPage">Intro</a>
             </li>
             <li data-menuanchor="secondPage">
-                <a href="#secondPage">Skill set</a>
+                <a href="#secondPage">Skills</a>
             </li>
             <li data-menuanchor="3rdPage">
                 <a href="#3rdPage">Works</a>
@@ -77,11 +77,11 @@
             </div>
         </div>
         <div class="section secondPage">
-            <h1>Skill set</h1>
+            <h1>Skills</h1>
             <div class="content">
                 <div class="intro">
                     <p>
-                        As a front-end developer, I dedicate to deliver pixel perfect website with clean, elegant and efficient code                        
+                        As a front-end developer, I dedicate to deliver pixel perfect websites with clean, elegant and efficient code                        
                     </p>
                     <p>
                         With great passion in web development, I'm fascinated in learning the edge cutting technologies and adding them into my skill set.
@@ -128,10 +128,6 @@
                         <p>Gulp</p>
                     </div>
                 </div>
-                <div class="intro">
-                        <p>
-                        </p>
-                    </div>
             </div>
         </div>
         <div class="section thirdPage">
@@ -146,7 +142,7 @@
                         </a>
                         <div class="text">
                             <h2>Sayings</h2>
-                            <p>A message board website built with NodeJS, MongoDB and Boostrap</p>
+                            <p>A message board website built with Node.js, MongoDB and Boostrap</p>
                         </div>
                     </div>
                     <div class="frame">
@@ -184,7 +180,6 @@
                             <p>A lightweight JavaScript encapsulated tool which can realize the similar function of jQuery</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -192,21 +187,13 @@
             <h1>About Me</h1>
             <div class="intro">
                 <div class="text">
-                    <p>Greetings!</p>
-                    <p>Once I was a chemical engineer in SINOPEC. I had a master degree in chemical engineering and a bachelor
-                        degree in applied chemistry.</p>
-                    <p>Driven by interest towards information technology and design, I began to learn HTML, CSS and JavaScript.
-                        Thanks to the open sources community, I’ve been able to continuously learn new techniques in web
-                        development. Years of experience in academic research gives me the capacity of quick learning and
-                        critical thinking.</p>
-                    <p>During the process, I found myself increasingly fascinated in this field. Why not choose a career that
-                        I truly love? So, I decided to take a leap of faith.</p>
-                    <p>I finished my study of front-end technology systematically in IT Cast Education and Baidu Institute of
-                        Front-End Technology. I gained valuable experience in web development from projects finished on my
-                        own and in collaboration with others developers. I plan to dig in front-end tech and expand my skillset
-                        to back-end and UI-design as well.</p>
-                    <p>Currently I’m building an academic search website designed for the undergraduate students.</p>
-                    <p>If you are looking for a front-end developer, feel free to contact me!</p>
+                    <p class="firstP">Hi, I’m Haoming. You can also call me Felix.</p>
+                    <p class="firstP">Once I was a chemical engineer and researcher. Why did I shift my career to web development? The main reason is my passion for information technology and I really want to choose a career that I truly love.</p>
+                    <p class="firstP">During the process of learning front-end technologies, I have always been excited about gaining new techniques and put them into practice. I have a great sense of fulfillment when I finished a project on my own and debugged the code to make the program functioning. I find myself in a positive feedback loop which has been the core drive of my continuous learning.</p>
+                    <p class="hiddenP">I'm also a big fan of running. I find there're many things in common between running and learning: they are hard to persist at the beginning and even a torture for those who don’t love them; they can bring you the pleasure and fulfillment once you get over the hardest part; they can make you stronger physically and mentally as a reward for your perseverance. </p>
+                    <p class="secondP">I plan to dig in front-end techniques and expand my scope to back-end as well. Interdisciplinary knowledge is also a huge attraction to me. It diversifies my knowledge repository and brings me new horizon for this world.</p>
+                    <p class="hiddenP">I'd like to share my experience with you in my <a href="#">blog</a>.</p>
+                    <p class="secondP">Currently I'm a front-end web developer with hands-on experience and versatile skill set.If you are looking for a front-end developer or have any suggestions about my website, feel free to contact me!<a class="email" href="mailto:whuwhm@outlook.com"><img class="svg icon" src="./img/mail.svg" alt="email"></a></p>
                 </div>
             </div>
             <div class="row">
@@ -216,7 +203,7 @@
     </div>
     <script src="js/vendor/fullpage.min.js"></script>
     <script type="text/javascript">
-        //fullpage config
+        //fullpage configU
         var myFullpage = new fullpage('#fullpage', {
             sectionsColor: ['#22C3AA', '#4BBFC3', '#46A4D8', '#4EA9BB'],
             anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
@@ -288,36 +275,6 @@
 
         }); 
     </script>
-
-    <script>
-        //3thPage works
-        //The frame is a flex box 
-        //set their height the same as the that of the heightest one
-
-        (function () {
-            if (document.documentElement.clientWidth > 480) {
-                var frames = $(".frame");
-                var frameHeighArr = [];
-
-                for (var i = 0, len = frames.length; i < len; i++) {
-                    frameHeighArr.push(frames[i].scrollHeight);
-                }
-
-                var maxHeight = Math.max(...frameHeighArr);
-                for (var i = 0, len = frames.length; i < len; i++) {
-                    frames[i].style.height = maxHeight + "px";
-                }
-            } else {
-                return
-            }
-        }
-        )();
-
-
-
-
-    </script>
-
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>
