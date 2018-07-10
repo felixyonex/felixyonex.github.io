@@ -9,18 +9,18 @@
 
 1. This site is built with fullpage, so it consists of four vertical slides. You just need to scroll down.
 
-![first page](https://github.com/felixyonex/blob/master/img/demo01.png)
+![first page](https://github.com/felixyonex/felixyonex.github.io/blob/master/img/demo01.png)
 
 
 2. You can click the project and redirect to my GitHub Repository.
 
-![third page](https://github.com/felixyonex/blob/master/img/demo02.png)
+![third page](https://github.com/felixyonex/felixyonex.github.io/blob/master/img/demo02.png)
 
 
 3. This is a responsive website. So you can change the size of your window, or view it on the mobile device.
 
-![fist page on mobile](https://github.com/felixyonex/blob/master/img/demo03.png)
+![fist page on mobile](https://github.com/felixyonex/felixyonex.github.io/blob/master/img/demo03.png)
 
-![third page on mobile](https://github.com/felixyonex/blob/master/img/demo04.png)
+![third page on mobile](https://github.com/felixyonex/felixyonex.github.io/blob/master/img/demo04.png)
 
 4. Welcome to email me or issue if you find anything that needs to be improved. Thanks!
