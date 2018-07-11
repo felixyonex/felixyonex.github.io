@@ -636,7 +636,7 @@ h1 {
                     } 
                 }
             }
-            .hiddenP {
+            .hidden {
                 display: none;
             }
         }
@@ -669,8 +669,37 @@ h1 {
                     margin: 1vw auto;
                     font-size: 1rem;
                 }
+                .arrowDown {
+                    width: 40px;
+                    height: 40px;
+                    position: relative;
+                    left: 45%;
+                    bottom: -1vw;
+                    background-image: url("../img/down.svg");
+                    background-size: contain;
+                }
+                .firstP{
+                    position: absolute;
+                }
+                .secondP {
+                    display: none;
+                    margin-top: 10%;
+                    position: absolute;
+                }
+                .arrowUp {
+                    width: 40px;
+                    height: 40px;
+                    position: relative;
+                    left: 45%;
+                    top: -2vw;
+                    background-image: url("../img/down.svg");
+                    transform: rotate(180deg);
+                    background-size: contain;
+                }
+                
 
-                .firstP:nth-child(3) {
+
+/*                 .firstP:nth-child(3) {
 
                     &::after {
                         content: "";
@@ -690,14 +719,12 @@ h1 {
 
                 }
 
-                .secondP {
-                    display: none;
-                }
                 .svg&.icon {
                     width: 10px;
                     height: 10px;
                     transform: translateY(0);
-                }
+                } */
+
             }
         }
     }

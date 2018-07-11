@@ -586,7 +586,7 @@ h1 {
 #fullpage .fourthPage .intro P .email .icon:hover path {
   fill: #a6ff17;
 }
-#fullpage .fourthPage .intro .hiddenP {
+#fullpage .fourthPage .intro .hidden {
   display: none;
 }
 @media screen and (max-width: 1300px) {
@@ -613,32 +613,62 @@ h1 {
   }
   #fullpage .fourthPage .intro {
     top: 6%;
+    /*                 .firstP:nth-child(3) {
+
+                    &::after {
+                        content: "";
+                        width: 10%;
+                        height: 8vw;
+                        position: absolute;
+                        left: 45%;
+                        bottom: -8vw;
+                        background-image: url("../img/down.svg");
+                        background-size: contain;
+                        transition: transform 0.3s;
+
+                    }
+                    &:hover::after{
+                        transform: translateY(5px) scale(0.8);
+                    }
+
+                }
+
+                .svg&.icon {
+                    width: 10px;
+                    height: 10px;
+                    transform: translateY(0);
+                } */
   }
   #fullpage .fourthPage .intro p {
     margin: 1vw auto;
     font-size: 1rem;
   }
-  #fullpage .fourthPage .intro .firstP:nth-child(3)::after {
-    content: "";
-    width: 10%;
-    height: 8vw;
-    position: absolute;
+  #fullpage .fourthPage .intro .arrowDown {
+    width: 40px;
+    height: 40px;
+    position: relative;
     left: 45%;
-    bottom: -8vw;
+    bottom: -1vw;
     background-image: url("../img/down.svg");
     background-size: contain;
-    transition: transform 0.3s;
   }
-  #fullpage .fourthPage .intro .firstP:nth-child(3):hover::after {
-    transform: translateY(5px) scale(0.8);
+  #fullpage .fourthPage .intro .firstP {
+    position: absolute;
   }
   #fullpage .fourthPage .intro .secondP {
     display: none;
+    margin-top: 10%;
+    position: absolute;
   }
-  .svg#fullpage .fourthPage .intro.icon {
-    width: 10px;
-    height: 10px;
-    transform: translateY(0);
+  #fullpage .fourthPage .intro .arrowUp {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 45%;
+    top: -2vw;
+    background-image: url("../img/down.svg");
+    transform: rotate(180deg);
+    background-size: contain;
   }
 }
 @keyframes emersion {
