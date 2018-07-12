@@ -94,14 +94,13 @@ h1 {
   position: relative;
   width: 250px;
   height: 250px;
-  margin: 0 auto;
   border-radius: 50%;
+  margin: 0 auto;
   border: 10px solid #eee;
-  background: url("../img/avatarMin.jpg") no-repeat center;
   background-size: contain;
-  overflow: hidden;
-  opacity: 0;
-  animation: zoomInOut 1s 0.2s forwards;
+  background: url("../img/avatarMin.jpg") no-repeat center;
+  display: hidden;
+  animation: zoomInOut 0.8s forwards;
   transition: all 1s;
 }
 #fullpage .firstPage .content #avatarSpace #avatar img {
@@ -128,7 +127,7 @@ h1 {
   font-size: 3.5rem;
   text-shadow: 1px 2px #22c3aa, 2px 4px #aee2d9;
   color: #eef3f0;
-  animation: zoomInOut 1s 0.8s forwards;
+  animation: zoomInOut 0.5s 0.6s forwards;
 }
 #fullpage .firstPage .content h2 {
   font-family: 'Consolas', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -137,7 +136,7 @@ h1 {
   top: 15%;
   opacity: 0;
   transform: translateY(10px);
-  animation: emersion 1s 1.4s forwards;
+  animation: emersion 0.5s 0.7s forwards;
 }
 #fullpage .firstPage .content h2:nth-child(3) {
   color: #eef3f0;
@@ -153,7 +152,7 @@ h1 {
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s;
-  animation: emersion 1.5s 2s forwards;
+  animation: emersion 0.5s 0.8s forwards;
 }
 #fullpage .firstPage .content p a:hover {
   transform: translateY(-2px);
@@ -169,7 +168,7 @@ h1 {
   justify-content: center;
   opacity: 0;
   transform: translateY(10px);
-  animation: emersion 0.5s 2.8s forwards;
+  animation: emersion 0.5s 0.9s forwards;
 }
 #fullpage .firstPage .content ul li {
   display: inline-block;
@@ -351,49 +350,51 @@ h1 {
   color: #eef3f0;
 }
 #fullpage .thirdPage .content {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
+  width: 90%;
   top: 15%;
-}
-#fullpage .thirdPage .content .row {
   padding: 10px;
   margin: 1vw auto;
-  width: 90%;
   position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
 }
-#fullpage .thirdPage .content .row .frame {
+#fullpage .thirdPage .content a {
+  width: 100%;
+  margin: 1.2rem;
+  text-decoration: none;
+}
+#fullpage .thirdPage .content a:hover {
+  text-decoration: none;
+}
+#fullpage .thirdPage .content a .frame {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
   width: 100%;
-  margin: 1.2vw;
   background-color: #46a4d8;
   border: 1px solid #46a4d8;
   border-radius: 1vw;
   box-shadow: 0px 2px 12px 1px rgba(240, 240, 240, 0.6);
   transition: all 0.5s;
 }
-#fullpage .thirdPage .content .row .frame .flip-container {
+#fullpage .thirdPage .content a .frame .flip-container {
   perspective: 1000px;
   margin: 1vw auto;
   padding-top: 0.5vw;
   position: relative;
 }
-#fullpage .thirdPage .content .row .frame .flip-container .flipper {
+#fullpage .thirdPage .content a .frame .flip-container .flipper {
   width: 8vw;
   height: 8vw;
   position: relative;
   background-size: contain;
   margin: 0 auto;
 }
-#fullpage .thirdPage .content .row .frame .flip-container .flipper::after,
-#fullpage .thirdPage .content .row .frame .flip-container .flipper::before {
+#fullpage .thirdPage .content a .frame .flip-container .flipper::after,
+#fullpage .thirdPage .content a .frame .flip-container .flipper::before {
   content: "";
   position: absolute;
   cursor: pointer;
@@ -404,29 +405,17 @@ h1 {
   transition: all 0.6s;
   backface-visibility: hidden;
 }
-#fullpage .thirdPage .content .row .frame .flip-container .flipper::before {
+#fullpage .thirdPage .content a .frame .flip-container .flipper::before {
   transform: rotateY(-180deg);
   background: url("../img/github-fill.svg");
 }
-#fullpage .thirdPage .content .row .frame .flip-container .flipper:hover::after {
+#fullpage .thirdPage .content a .frame .flip-container .flipper:hover::after {
   transform: rotateY(180deg);
 }
-#fullpage .thirdPage .content .row .frame .flip-container .flipper:hover::before {
+#fullpage .thirdPage .content a .frame .flip-container .flipper:hover::before {
   transform: rotateY(0deg);
 }
-#fullpage .thirdPage .content .row .frame:nth-child(1) .flipper::after {
-  background: url("../img/chat-01.svg");
-}
-#fullpage .thirdPage .content .row .frame:nth-child(2) .flipper::after {
-  background: url("../img/mobile.svg");
-}
-#fullpage .thirdPage .content .row .frame:nth-child(3) .flipper::after {
-  background: url("../img/finance_\ form_icon_1.svg");
-}
-#fullpage .thirdPage .content .row .frame:nth-child(4) .flipper::after {
-  background: url("../img/code-library.svg");
-}
-#fullpage .thirdPage .content .row .frame .text {
+#fullpage .thirdPage .content a .frame .text {
   color: #eef3f0;
   height: auto;
   display: flex;
@@ -435,46 +424,58 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-#fullpage .thirdPage .content .row .frame .text h2 {
+#fullpage .thirdPage .content a .frame .text h2 {
   display: inline-block;
   font-size: 2rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   font-weight: 300;
 }
-#fullpage .thirdPage .content .row .frame .text p {
+#fullpage .thirdPage .content a .frame .text p {
   display: inline-block;
   margin: 5px 10px 20px 15px;
   font-size: 1.2rem;
   font-family: "Microsoft Yahei", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#fullpage .thirdPage .content .row .frame:hover {
+#fullpage .thirdPage .content a:nth-child(1) .flipper::after {
+  background: url("../img/chat-01.svg");
+}
+#fullpage .thirdPage .content a:nth-child(2) .flipper::after {
+  background: url("../img/mobile.svg");
+}
+#fullpage .thirdPage .content a:nth-child(3) .flipper::after {
+  background: url("../img/finance_\ form_icon_1.svg");
+}
+#fullpage .thirdPage .content a:nth-child(4) .flipper::after {
+  background: url("../img/code-library.svg");
+}
+#fullpage .thirdPage .content .frame:hover {
   box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(18, 121, 177, 0.7);
   background-color: rgba(18, 121, 177, 0.7);
   transform: translateY(-5px);
 }
 @media screen and (max-width: 1000px) {
-  #fullpage .thirdPage .content .row .frame .text h2 {
+  #fullpage .thirdPage .content a .frame .text h2 {
     font-size: 1.7rem;
   }
 }
 @media screen and (max-width: 800px) {
-  #fullpage .thirdPage .content .row .frame .text h2 {
+  #fullpage .thirdPage .content a .frame .text h2 {
     font-size: 1.5rem;
   }
-  #fullpage .thirdPage .content .row .frame .text p {
+  #fullpage .thirdPage .content a .frame .text p {
     font-size: 1.1rem;
   }
 }
 @media screen and (max-device-width: 1366px) {
-  #fullpage .thirdPage .content .row .frame .flip-container .flipper::before {
+  #fullpage .thirdPage .content a .frame .flip-container .flipper::before {
     visibility: hidden;
   }
-  #fullpage .thirdPage .content .row .frame .text h2 {
+  #fullpage .thirdPage .content a .frame .text h2 {
     font-size: 1.3rem;
   }
-  #fullpage .thirdPage .content .row .frame .text P {
+  #fullpage .thirdPage .content a .frame .text P {
     font-size: 1rem;
   }
 }
@@ -486,15 +487,15 @@ h1 {
   #fullpage .thirdPage .content {
     height: 100%;
     top: 5%;
-  }
-  #fullpage .thirdPage .content .row {
-    height: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
-  #fullpage .thirdPage .content .row .frame {
+  #fullpage .thirdPage .content a {
+    margin: 0 auto;
+  }
+  #fullpage .thirdPage .content a .frame {
     position: relative;
     margin: 3vw 0;
     display: flex;
@@ -503,33 +504,33 @@ h1 {
     justify-content: flex-start;
     align-items: center;
   }
-  #fullpage .thirdPage .content .row .frame .flip-container {
+  #fullpage .thirdPage .content a .frame .flip-container {
     width: 15vw;
     margin: 1vw;
   }
-  #fullpage .thirdPage .content .row .frame .flip-container img {
+  #fullpage .thirdPage .content a .frame .flip-container img {
     width: 20vw;
   }
-  #fullpage .thirdPage .content .row .frame .flip-container .flipper::before {
+  #fullpage .thirdPage .content a .frame .flip-container .flipper::before {
     visibility: hidden;
   }
-  #fullpage .thirdPage .content .row .frame .text {
+  #fullpage .thirdPage .content a .frame .text {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
   }
-  #fullpage .thirdPage .content .row .frame .text h2 {
+  #fullpage .thirdPage .content a .frame .text h2 {
     margin-top: 1vw;
     font-size: 1.2rem;
   }
-  #fullpage .thirdPage .content .row .frame .text p {
+  #fullpage .thirdPage .content a .frame .text p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: -1vw;
     font-size: 0.8rem;
   }
-  #fullpage .thirdPage .content .row .frame:nth-child(3) {
+  #fullpage .thirdPage .content a:nth-child(3) {
     display: none;
   }
 }

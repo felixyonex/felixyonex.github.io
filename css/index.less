@@ -99,14 +99,15 @@ h1 {
                     position: relative;
                     width: 250px;
                     height: 250px;
-                    margin: 0 auto;
                     border-radius: 50%;
+                    margin: 0 auto;
                     border: 10px solid #eee;
-                    background: url("../img/avatarMin.jpg") no-repeat center;
                     background-size: contain;
-                    overflow: hidden;
-                    opacity: 0;
-                    animation: zoomInOut 1s 0.2s forwards;
+                    background: url("../img/avatarMin.jpg") no-repeat center;
+                    // overflow: hidden;
+                    // opacity: 0;
+                    display: hidden;
+                    animation: zoomInOut 0.8s forwards;
                     transition: all 1s;
                     img {
                         width: 100%;
@@ -124,7 +125,7 @@ h1 {
             h2,
             p {
                 text-align: center;
-                position: relative; // display: inline-block;
+                position: relative;
                 margin: 20px auto;
             }
             h1 {
@@ -134,7 +135,7 @@ h1 {
                 font-size: 3.5rem;
                 text-shadow: 1px 2px #22c3aa, 2px 4px #aee2d9;
                 color: #eef3f0;
-                animation: zoomInOut 1s 0.8s forwards;
+                animation: zoomInOut 0.5s 0.6s forwards;
             }
             h2 {
                 font-family: 'Consolas', @font-face;
@@ -143,7 +144,7 @@ h1 {
                 top: 15%;
                 opacity: 0;
                 transform: translateY(10px);
-                animation: emersion 1s 1.4s forwards;
+                animation: emersion 0.5s 0.7s forwards;
             }
             h2:nth-child(3) {
                 color: #eef3f0
@@ -160,7 +161,7 @@ h1 {
                     opacity: 0;
                     transform: translateY(10px);
                     transition: all 0.3s;
-                    animation: emersion 1.5s 2s forwards;
+                    animation: emersion 0.5s 0.8s forwards;
                     &:hover {
                         transform: translateY(-2px);
                         color: #a6ff17;
@@ -177,7 +178,7 @@ h1 {
                 justify-content: center;
                 opacity: 0;
                 transform: translateY(10px);
-                animation: emersion 0.5s 2.8s forwards;
+                animation: emersion 0.5s 0.9s forwards;
                 li {
                     display: inline-block;
                     width: 33.33%;
@@ -191,7 +192,7 @@ h1 {
                         margin: 0 auto;
                         position: relative;
                         font-size: 1rem;
-                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; // opacity: 0;
+                        font-family: @font-face;
                         transition-property: color, transform;
                         transition-duration: 0.3s;
                         .icon {
@@ -232,7 +233,6 @@ h1 {
                         &::after {
                             content: "Resume";
                             font-family: @font-face;
-
                         }
                     }
                 }
@@ -306,8 +306,7 @@ h1 {
                 font-size: 1.5rem;
                 color: #e1feff;
                 P {
-                    cursor: default;
-                    // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3)
+                    cursor: default; // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3)
                 }
             }
             .skills {
@@ -354,7 +353,6 @@ h1 {
                         }
                     }
                 }
-
                 div.skills div {
                     margin: 1vw, 1vw;
                     border-radius: 1vw;
@@ -364,7 +362,6 @@ h1 {
                     }
                 }
             }
-
         }
     }
     .thirdPage {
@@ -380,25 +377,29 @@ h1 {
         }
         .content {
             position: relative;
-            width: 100%;
-            margin: 0 auto;
+            width: 90%;
+            padding: 10px;
             top: 15%;
-            .row {
-                padding: 10px;
-                margin: 1vw auto;
-                width: 90%;
-                position: relative;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                justify-content: center;
+            padding: 10px;
+            margin: 1vw auto;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            a {
+                width: 100%;
+                margin: 1.2rem;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none;
+                }
                 .frame {
                     display: flex;
                     flex-direction: column;
                     flex-wrap: nowrap;
                     justify-content: flex-start;
-                    width: 100%;
-                    margin: 1.2vw;
+                    width: 100%; // margin: 1.2vw;
                     background-color: #46a4d8;
                     border: 1px solid #46a4d8;
                     border-radius: 1vw;
@@ -439,26 +440,6 @@ h1 {
                             }
                         }
                     }
-                    &:nth-child(1) {
-                        .flipper::after {
-                            background: url("../img/chat-01.svg");
-                        }
-                    }
-                    &:nth-child(2) {
-                        .flipper::after {
-                            background: url("../img/mobile.svg");
-                        }
-                    }
-                    &:nth-child(3) {
-                        .flipper::after {
-                            background: url("../img/finance_\ form_icon_1.svg");
-                        }
-                    }
-                    &:nth-child(4) {
-                        .flipper::after {
-                            background: url("../img/code-library.svg");
-                        }
-                    }
                     .text {
                         color: #eef3f0;
                         height: auto;
@@ -482,30 +463,50 @@ h1 {
                         }
                     }
                 }
-                .frame:hover {
-                    box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.6);
-                    border: 1px solid rgba(18, 121, 177, 0.7);
-                    background-color: rgba(18, 121, 177, 0.7);
-                    transform: translateY(-5px);
+                &:nth-child(1) {
+                    .flipper::after {
+                        background: url("../img/chat-01.svg");
+                    }
                 }
+                &:nth-child(2) {
+                    .flipper::after {
+                        background: url("../img/mobile.svg");
+                    }
+                }
+                &:nth-child(3) {
+                    .flipper::after {
+                        background: url("../img/finance_\ form_icon_1.svg");
+                    }
+                }
+                &:nth-child(4) {
+                    .flipper::after {
+                        background: url("../img/code-library.svg");
+                    }
+                }
+            }
+            .frame:hover {
+                box-shadow: 0px 5px 15px -2px rgba(0, 0, 0, 0.6);
+                border: 1px solid rgba(18, 121, 177, 0.7);
+                background-color: rgba(18, 121, 177, 0.7);
+                transform: translateY(-5px);
             }
         }
         @media screen and (max-width:1000px) {
-            .content .row .frame .text h2 {
+            .content a .frame .text h2 {
                 font-size: 1.7rem;
             }
         }
         @media screen and (max-width:800px) {
-            .content .row .frame .text h2 {
+            .content a .frame .text h2 {
                 font-size: 1.5rem;
             }
-            .content .row .frame .text p {
+            .content a .frame .text p {
                 font-size: 1.1rem;
             }
         }
         @media screen and (max-device-width:1366px) {
             .content {
-                .row {
+                a {
                     .frame {
                         .flip-container {
                             .flipper::before {
@@ -532,15 +533,15 @@ h1 {
             .content {
                 height: 100%;
                 top: 5%;
-                .row {
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: nowrap;
-                    justify-content: flex-start;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                a {
+                    margin: 0 auto;
                     .frame {
                         position: relative;
-                        margin: 3vw 0; 
+                        margin: 3vw 0;
                         display: flex;
                         flex-direction: row;
                         flex-wrap: nowrap;
@@ -555,7 +556,6 @@ h1 {
                             .flipper::before {
                                 visibility: hidden;
                             }
-                        
                         }
                         .text {
                             display: flex;
@@ -573,9 +573,9 @@ h1 {
                                 font-size: 0.8rem
                             }
                         }
-                        &:nth-child(3) {
-                            display: none;
-                        }
+                    }
+                    &:nth-child(3) {
+                        display: none;
                     }
                 }
             }
@@ -594,7 +594,7 @@ h1 {
         .intro {
             margin: 0 auto;
             position: relative;
-            top: 15%; 
+            top: 15%;
             width: 70%;
             P {
                 font-family: @font-face;
@@ -603,14 +603,13 @@ h1 {
                 font-size: 1.4rem;
                 a {
                     display: inline-block;
-                text-shadow: 1px 1px 1px #54a6b6;
-                transition: all 0.3s;
-
-                &:hover {
-                    color: #a6ff17;
-                    text-decoration: none;
-                    transform: translateY(-2px);
-                }
+                    text-shadow: 1px 1px 1px #54a6b6;
+                    transition: all 0.3s;
+                    &:hover {
+                        color: #a6ff17;
+                        text-decoration: none;
+                        transform: translateY(-2px);
+                    }
                 }
                 .email {
                     display: inline-block;
@@ -623,17 +622,14 @@ h1 {
                         path {
                             fill: #00705f;
                             transition: all 0.3s;
-
                         }
                     }
-
-                    .icon:hover{
+                    .icon:hover {
                         transform: translateY(-3px);
                         path {
                             fill: #a6ff17;
-    
                         }
-                    } 
+                    }
                 }
             }
             .hidden {
@@ -662,7 +658,6 @@ h1 {
                 font-size: 2.5rem;
                 top: 8%;
             }
-
             .intro {
                 top: 6%;
                 p {
@@ -678,7 +673,7 @@ h1 {
                     background-image: url("../img/down.svg");
                     background-size: contain;
                 }
-                .firstP{
+                .firstP {
                     position: absolute;
                 }
                 .secondP {
@@ -696,10 +691,7 @@ h1 {
                     transform: rotate(180deg);
                     background-size: contain;
                 }
-                
-
-
-/*                 .firstP:nth-child(3) {
+                /*                 .firstP:nth-child(3) {
 
                     &::after {
                         content: "";
@@ -724,7 +716,6 @@ h1 {
                     height: 10px;
                     transform: translateY(0);
                 } */
-
             }
         }
     }
