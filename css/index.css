@@ -442,7 +442,7 @@ h1 {
   background: url("../img/mobile.svg");
 }
 #fullpage .thirdPage .content a:nth-child(3) .flipper::after {
-  background: url("../img/auction.svg");
+  background: url("../img/ladder.svg");
 }
 #fullpage .thirdPage .content a:nth-child(4) .flipper::after {
   background: url("../img/code-library.svg");
